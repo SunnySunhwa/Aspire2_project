@@ -6,7 +6,6 @@ var phone = document.getElementById('phone');
 var msg = document.getElementById('message');
 var formControl = document.getElementsByClassName('form-control');
 var warning = document.getElementsByClassName('help-block')
-// document.getElementById('image1').className="new-css-1, new-css-2";
 
 function validationCheck() {
   if (!firstName.value || !lastName.value || !email.value || !phone.value || !msg.value){
@@ -30,7 +29,7 @@ function reload(){
   document.location.reload(true);
 }
 
-// add event listener to table
+// add event listener 
 var submit = document.getElementById('submitButton');
 var reset = document.getElementById('resetButton');
 

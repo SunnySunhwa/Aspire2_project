@@ -202,6 +202,8 @@ header.masthead p {
   font-weight: 300;
 }
 
+
+/* To be responsive */
 @media (min-width: 768px) {
   header.masthead p {
     font-size: 1.15rem;
@@ -226,6 +228,8 @@ header.masthead p {
   }
 }
 
+
+/* image grid on 2nd page */
 .service-box {
   max-width: 400px;
 }
@@ -330,7 +334,7 @@ header.masthead p {
   height: 100%;
   }
 
-/* 2nd page */
+/* Tab menu on 2nd page */
 .tabs {
   left: 50%;
   -webkit-transform: translateX(-50%);

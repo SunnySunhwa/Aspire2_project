@@ -1,7 +1,6 @@
 (function($) {
-  "use strict"; // Start of use strict
+  "use strict"; 
 
-  // Smooth scrolling using jQuery easing
   $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -39,15 +38,4 @@
   // Collapse the navbar when page is scrolled
   $(window).scroll(navbarCollapse);
 
-    // get tallest tab__content element
-    let height = -1;
-
-    $('.tab__content').each(function() {
-      height = height > $(this).outerHeight() ? height : $(this).outerHeight();
-         $(this).css('position', 'absolute');
-    });
-      
-      // set height of tabs + top offset
-    $('[data-tabs]').css('min-height', height + 40 + 'px');
-
-})(jQuery); // End of use strict
+})(jQuery); 
