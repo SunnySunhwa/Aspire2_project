@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function SignInForm({ onSignIn }) {
   return (
@@ -24,6 +25,7 @@ function SignInForm({ onSignIn }) {
         </label>
       </div>
       <button className="button button__form--submit">Sign in</button>
+      <Link to="/signup"><button className="button2 button__form--submit">Sign up</button></Link>
     </form>
   )
 }

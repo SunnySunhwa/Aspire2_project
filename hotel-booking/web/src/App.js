@@ -15,6 +15,7 @@ import NavBar from './components/NavBar';
 import RoomsList from './components/RoomsList';
 import SignInForm from './components/SignInForm';
 import SignUpForm from './components/SignUpForm';
+import Static from './components/Static';
 import './css/style.css';
 import {
   filterParams,
@@ -219,12 +220,41 @@ class App extends Component {
             <Switch>
               <Route path="/" exact render={() => (!!decodedToken && signedIn ?
                 (<Redirect to="/bookings" />) :
+                (  <div className="wrapper">
+                    <div className="header header__nav header--flex">
+                      <h1 className="header__heading header__heading--main">Hotel Booking System</h1>
+                      <NavBar
+                        signOut={signOut}
+                        loadMyBookings={loadMyBookings}
+                        user={signedIn ? decodedToken.sub : null}
+                      />
+                    </div>
+                    <div className="wrapper__content">
+                      <Static></Static>
+                      <div className="header__page">
+                      </div>
+                    </div>
+                  </div>
+                ))} />
+                )
+
+              <Route path="/signin" exact render={() => (!!decodedToken && signedIn ?
+                (<Redirect to="/bookings" />) :
                 (<div className="wrapper__form">
                   <div className="header__page">
                     <h2 className="header__heading header__heading--sub--alt">Sign in with email</h2>
                   </div>
                   <SignInForm onSignIn={this.onSignIn} />
-                  <h3 className="header__heading header__heading--sub--alt">Don't have an account?</h3>
+                </div>
+                )
+              )} />
+
+              <Route path="/signup" exact render={() => (!!decodedToken && signedIn ?
+                (<Redirect to="/bookings" />) :
+                (<div className="wrapper__form">
+                  <div className="header__page">
+                    <h2 className="header__heading header__heading--sub--alt">Sign up with email</h2>
+                  </div>
                   <SignUpForm onSignUp={this.onSignUp} />
                 </div>
                 )
@@ -240,7 +270,7 @@ class App extends Component {
                   {!!decodedToken && !!roomData && !loading && (
                     <div className="wrapper">
                       <div className="header header__nav header--flex">
-                        <h1 className="header__heading header__heading--main">Company Name Here</h1>
+                        <h1 className="header__heading header__heading--main">Hotel Booking System</h1>
                         <NavBar
                           signOut={signOut}
                           loadMyBookings={loadMyBookings}
@@ -298,7 +328,7 @@ class App extends Component {
                       !!currentRoom && (
                         <div className="wrapper">
                           <header className="header header__nav header--flex">
-                            <h1 className="header__heading header__heading--main">Company Name Here</h1>
+                            <h1 className="header__heading header__heading--main">Hotel Booking System</h1>
                             <NavBar
                               signOut={signOut}
                               loadMyBookings={loadMyBookings}
@@ -336,7 +366,7 @@ class App extends Component {
                     !!roomData && (
                       <div className="wrapper">
                         <div className="header header__nav header--flex">
-                          <h1 className="header__heading header__heading--main">Company Name Here</h1>
+                          <h1 className="header__heading header__heading--main">Hotel Booking System</h1>
                           <NavBar
                             signOut={signOut}
                             loadMyBookings={loadMyBookings}

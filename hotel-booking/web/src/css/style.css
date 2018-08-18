@@ -36,13 +36,11 @@
   border-bottom-width: 0;
   border-left-width: 0;
 }
-.table--booking--split .table__cell span.first {
+.table--booking--split .table__cell span:first-child {
   border-right: 0.1rem solid #cecece;
-  background: hotpink;
 }
-.table--booking--split .table__cell span.second {
+.table--booking--split .table__cell span:last-child {
   border-left: 0.1rem solid #cecece;
-  background: mediumseagreen;
 }
 .table__row--full {
   height: 6rem;
@@ -161,6 +159,41 @@ input[type=radio] {
   color: #fafafa;
 }
 .button--inline {
+  display: inline-block;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+  min-width: 1rem;
+  padding: 1.2rem 2.6rem;
+}
+.button2 {
+  background: #6c6c6c;
+  border: 0.1rem solid #6c6c6c;
+  color: #fafafa;
+  cursor: pointer;
+  font-family: "raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-right: 2rem;
+  min-width: 4rem;
+  padding: 1.2rem 3rem;
+  text-transform: uppercase;
+}
+.button2:hover {
+  background: #fafafa;
+  border: 0.1rem solid #6c6c6c;
+  color: #ed1c24;
+}
+.button2--alternative {
+  background: #fafafa;
+  border: 0.1rem solid #1c1c1c;
+  color: #1c1c1c;
+}
+.button2--alternative:hover {
+  background: #1c1c1c;
+  border: 0.1rem solid #1c1c1c;
+  color: #fafafa;
+}
+.button2--inline {
   display: inline-block;
   font-size: 1.4rem;
   margin: 0.6rem;
@@ -506,7 +539,7 @@ td.rdtYear:hover {
   width: 50%;
 }
 .table__cell--business-unit-1.table__cell--second-half-hour {
-  background: #7026ff;
+  background: #70d6ff;
   cursor: pointer;
   display: block;
   float: right;
@@ -611,7 +644,7 @@ body {
 }
 a {
   cursor: pointer;
-  padding: 2rem;
+  padding: 2rem 0;
   text-decoration: none;
 }
 ul {
@@ -671,7 +704,7 @@ li {
   grid-row: 2;
 }
 .header {
-  background: #1c1c1c;
+  background: #c90119;
   -webkit-box-shadow: 0px 2px 5px 0px #cecece;
   box-shadow: 0px 2px 5px 0px #cecece;
   grid-area: header;
@@ -814,7 +847,7 @@ li {
 }
 .form__input--select {
   background: #fafafa;
-  border: 0.1rem solid #a5a5a5;
+  border: 0.1rem solid #6c6c6c;
   display: block;
   font-size: 1.4rem;
   margin: 0.5rem auto;
@@ -823,7 +856,7 @@ li {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-image: linear-gradient(45deg, transparent 50%, #a5a5a5 50%), linear-gradient(135deg, #a5a5a5 50%, transparent 50%), linear-gradient(to right, #a5a5a5, #a5a5a5);
+  background-image: linear-gradient(45deg, transparent 50%, #6c6c6c 50%), linear-gradient(135deg, #6c6c6c 50%, transparent 50%), linear-gradient(to right, #6c6c6c, #6c6c6c);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
@@ -834,7 +867,7 @@ li {
 }
 .form__input--date {
   background: #f4f4f4;
-  border: 0.1rem solid #a5a5a5;
+  border: 0.1rem solid #6c6c6c;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #1c1c1c;
@@ -847,7 +880,7 @@ li {
   width: 100%;
 }
 .form__input--textarea {
-  border: 0.1rem solid #a5a5a5;
+  border: 0.1rem solid #6c6c6c;
   display: block;
   font-family: "raleway", sans-serif;
   font-size: 1.8rem;
@@ -938,14 +971,13 @@ input[type=radio] {
   padding-top: 4.4rem;
   width: 20%;
 }
-
-.loading_animation {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
+.static {
+  width: 100%;
+}
+.static--bg-img {
+  background-image: inline-url('../assets/bg.jpg');
+}
+.info {
+  text-align: center;
+  margin: 30rem;
 }

@@ -6,9 +6,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const authMiddleware = require('./middleware/auth')
-
 const config = require('./config')
-
 const server = express()
 
 // Middleware

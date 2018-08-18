@@ -7,11 +7,11 @@ const bookingSchema = new Schema({
   user: { type: Schema.ObjectId, ref: 'User' },
   bookingStart: Date,
   bookingEnd: Date,
-  startHour: Number,
-  duration: Number,
-  recurring: [],
-  businessUnit: { type: String, required: true },
-  purpose: { type: String, required: true },
+  // startHour: Number,
+  // duration: Number,
+  // recurring: [],
+  // businessUnit: { type: String, required: true },
+  // purpose: { type: String, required: true },
   roomId: { type: Schema.ObjectId, ref: 'Room' }
 })
 
@@ -60,15 +60,15 @@ bookingSchema.path('bookingStart').validate(function(value) {
 
 const roomSchema = new Schema({
   name: { type: String, index: true, required: true },
-  floor: { type: String, required: true },
-  capacity: Number,
+  roomType: { type: String, required: true },
+  bedType: { type: String, required: true },
   assets: {
-    macLab: { type: Boolean, default: false },
-    pcLab: { type: Boolean, default: false },
-    projector: { type: Boolean, default: false },
-    tv: { type: Boolean, default: false },
-    opWalls: { type: Boolean, default: false },
-    whiteBoard: { type: Boolean, default: false }
+    data: { type: Boolean, default: false },
+    pillowMenu: { type: Boolean, default: false },
+    kitchen: { type: Boolean, default: false },
+    wideTv: { type: Boolean, default: false },
+    extraBed: { type: Boolean, default: false },
+    workStation: { type: Boolean, default: false }
   },
   bookings: [bookingSchema]
 })
